@@ -1,0 +1,79 @@
+<!--pages/playing/playing.wxml-->
+<!-- 视频界面 -->
+<view class='video-box'>
+  <video src="{{video[id].videoSrc}}" autoplay="true"></video>
+</view>
+<!-- 视频描述 -->
+<view class='describe'>
+  {{video[id].desc}}
+</view>
+
+<!-- 推荐视频 -->
+<view class='recommendedVideo-container'>
+  <view class='recommendedVideo-title'>
+    <text>视频推荐列表...</text>
+  </view>
+
+  <block wx:for="{{recommendedvideo}}" wx:key="index">
+    <view class='recommendedVideo'>
+      <view class='recommendedVideo-p'>
+        <block wx:for="{{videoPicture}}" wx:for-index="idx" wx:for-item="itemName" wx:key="index">
+          <block wx:if="{{idx==index}}">
+            <image src='{{itemName}}' mode='aspectFit'></image>
+          </block>
+        </block>
+        <view class='times'>
+          {{item.duration}}
+        </view>
+      </view>
+      <view class='recommendedVideo-t'>
+        <view class='recommendedVideo-t-title'>
+          {{item.title}}
+          <!-- 世界上最小的网站！小到只有0.4KB，你信么？【暗物质#1】 -->
+        </view>
+        <view class='recommendedVideo-t-bottom'>
+          <!-- 世界上最小 -->
+          {{item.playMsg}}万次观看 {{item.commentCount}}弹幕
+        </view>
+      </view>
+    </view>
+  </block>
+</view>
+
+<!-- 评论列表 -->
+<view class='comments'>
+   <!-- 评论数 -->
+   <view class='comments-num'>评论（{{commentNum}}）</view>
+
+   <block wx:for='{{commentsList}}'  wx:key='index'
+   wx:for-index='idxcomments'  wx:for-item="itemNamecomments">
+   <!-- 每一条评论的盒子 -->
+   <view class='comments-box'>
+    <!-- 头像 -->
+     <view class='head-picture'>
+       <block wx:for='{{userpicture}}' wx:for-index='idxmy' wx:for-item='itemNamemy' wx:key="index">
+         <block wx:if="{{idxmy==idxcomments}}">
+             <image src='{{itemNamemy}}' mode='aspectFit'></image>
+         </block>
+       </block>
+     </view>
+     <!-- 头像右边 -->
+     <view class='comments-right'>
+        <view class=''>
+           <!-- 用户名 -->
+           <view class='comments-right-top'>
+           <view class='username'>{{itemNamecomments.username}}</view>
+           <!-- 评论时间 -->
+           <view class='times'>{{itemNamecomments.commentDate}}</view>
+           </view>
+           <!-- 评论内容 -->
+           <view class='comments-right-bottom'>{{itemNamecomments.commentInfo}}</view>
+        </view>
+     </view>
+
+
+   </view>
+   
+   </block>
+
+</view>

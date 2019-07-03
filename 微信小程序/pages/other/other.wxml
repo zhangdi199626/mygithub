@@ -1,0 +1,7 @@
+<!--pages/other/other.wxml-->
+
+<view class='one'>未完待续......</view>
+<view>
+      <text class='two'>id:</text>
+      <text class='id'>{{id}}</text>
+</view>

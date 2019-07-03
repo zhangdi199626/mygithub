@@ -1,0 +1,137 @@
+/* pages/playing/playing.wxss */
+
+/* *******************************视频界面 */
+.video-box {
+  width: 100%;
+  height: 211px;
+  /* background-color: blue; */
+}
+.video-box video {
+  width: 100%;
+  height: 100%;
+}
+/********************************* 视频描述 */
+.describe {
+  width: 95%;
+  /* height: 100rpx; */
+  margin: 0 auto;
+  font-size: 17px;
+  /* background-color: red; */
+}
+
+/* *****************************推荐视频 */
+.recommendedVideo {
+  width: 95%;
+  height: 180rpx;
+  margin: 0 auto;
+  /* background-color: red; */
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20rpx;
+}
+.recommendedVideo-title {
+  height: 50rpx;
+  width: 95%;
+  margin: 10rpx auto;
+  font-weight: 600;
+  /* background-color: red; */
+  padding-top: 10rpx;
+  border-top: 2rpx solid #eee;
+}
+.recommendedVideo .recommendedVideo-p {
+  width: 40%;
+  height: 100%;
+  /* background-color: blue; */
+  position: relative;
+}
+.recommendedVideo .recommendedVideo-p .times {
+  position: absolute;
+  right: 10rpx;
+  bottom: 10rpx;
+  /* background-color: red; */
+  font-size: 14px;
+  color: white;
+}
+.recommendedVideo .recommendedVideo-p image {
+  width: 100%;
+  height: 100%;
+  border-radius: 10rpx;
+}
+.recommendedVideo .recommendedVideo-t {
+  width: 55%;
+  height: 100%;
+  /* background-color: aqua; */
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  flex-direction: column;
+  
+}
+.recommendedVideo .recommendedVideo-t .recommendedVideo-t-title {
+  color: #0D0C0C;
+  font-size: 14px;
+  width: 100%;
+}
+.recommendedVideo .recommendedVideo-t .recommendedVideo-t-bottom {
+  color: #999;
+  font-size: 14px;
+  text-align: left;
+  width: 100%;
+
+}
+
+/* 评论列表 */
+.comments {
+  width: 95%;
+  margin: 20rpx auto;
+  /* background-color: red; */
+}
+.comments .comments-num {
+  height: 50rpx;
+  /* background-color: blue; */
+  font-size: 14px;
+  line-height: 50rpx;
+  opacity: .7;
+}
+.comments .comments-box {
+  
+  /* background-color: red; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 14px;
+  margin-top: 20rpx;
+  border-bottom: 1
+}
+.comments .comments-box .head-picture {
+  width: 100rpx;
+  height: 100rpx;
+  /* background-color: rebeccapurple; */
+  border-radius: 50%;
+}
+.comments .comments-box .head-picture image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.comments .comments-box .comments-right {
+  width: 560rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.comments .comments-box .comments-right .comments-right-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: yellow; */
+}
+.comments .comments-box .comments-right .comments-right-top .times {
+  font-size: 12px;
+  color: #999;
+}
+.comments .comments-box .comments-right .comments-right-bottom {
+  /* background-color: green; */
+  font-size: 13px;
+  opacity: .8;
+}

@@ -1,0 +1,97 @@
+<!--index.wxml-->
+<view class='header-fixed'>
+   <view class='header'>
+     <image src='../../imgs/search.png'  class='left'></image>
+     <input class='search {{isActiveSearch?"activeSearch":""}}' placeholder='搜搜看' bindtap='onSearch'></input>
+     <image src='../../imgs/lcose.png' class='right' bindtap='closeSearch'></image>
+   </view>
+   </view>
+
+
+
+   <!-- 点击搜索框后  出现的界面 -->
+   <view  class='{{isActiveSearch?"isNone":""}}'>
+     <view class='click-sousuo'>
+        <view  class='top'>大家都在搜</view>
+        <view class='bottom'>
+          <text>东宫</text>
+          <text>老番茄</text>
+          <text>蔡徐坤</text>
+          <text>春天在哪里</text>
+          <text>隐形守护者</text>
+          <text>鬼泣5</text>
+          <text>药水哥</text>
+          <text>青春有你</text>
+          <text>翔翔大作战</text>
+          <text>izone</text>
+        </view>
+     </view>
+   </view>
+
+
+<view class='{{isActiveSearch?"":"isNone"}}'>
+
+<!-- 导航栏 -->
+ <view class='nav-box-fixed'> 
+ <!-- scroll-view是横向和纵向滚动视图
+ scroll-x是横向滚动 -->
+    <scroll-view scroll-x="true">
+     <view class='nav-box'>
+       <view wx:for="{{nav}}" wx:key="index" data-id="{{index}}" bindtap='onClickNav' class='{{active===index?"active":""}}'>
+      {{item.text}}
+       </view>
+     </view>
+    </scroll-view>
+ </view>
+
+ <!-- 轮播图 -->
+ <!-- 滑块视图容器。其中只可放置swiper-item组件，否则会导致未定义的行为。 -->
+ <view class='lunbo-box'>
+ <!-- indicator-dots是否显示示面板指示点indicator-dots -->
+  <!-- indicatorColor指示点颜色 -->
+  <!-- indicator-active-color当前选中的指示点颜色 -->
+  <!-- autoplay是否自动切换 -->
+  <!-- interval自动切换时间间隔 -->
+  <!-- duration滑动动画时长 -->
+  <!-- circular是否采用衔接滑动 -->
+   <swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}"
+   duration="{{duration}}" circular="{{circular}}"               indicator-dots="{{indicatorDots}}" 
+   indicator-color="{{indicatorColor}}"
+   indicator-active-color='{{indicatorActiveColor}}'
+   >
+  <block wx:for="{{imgUrls}}" wx:key="index">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" mode='aspectFit'/>
+    </swiper-item>
+  </block>
+</swiper>
+ </view>
+ 
+
+ <!-- 视频列表 -->
+  <view class='videoList-box'>
+    <block wx:for="{{video}}" wx:key="index">
+      <view class='video-box' bindtap='onPlayVideo' data-id='{{index}}'>
+        <view class='picture'>
+          <block wx:for="{{videoPicture}}" wx:for-index="idx" wx:for-item="itemName" wx:key="index">
+
+            <block wx:if="{{idx==index}}">
+              <image src='{{itemName}}' mode='aspectFit'></image>
+
+
+              <image class='playCount-p' src='../../imgs/playCount.png'></image>
+              <image class='commentCount-p' src='../../imgs/commentCount.png'></image>
+              <text class='playCount'>{{item.playCount}}</text>
+              <text class='commentCount'>{{item.commentCount}}</text>
+
+            </block>
+
+          </block>
+        </view>
+        {{item.desc}}
+      </view>
+    </block>
+  </view>
+</view> 
+

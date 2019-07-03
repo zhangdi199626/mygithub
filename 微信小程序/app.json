@@ -1,0 +1,15 @@
+{
+  "pages":[
+  
+    "pages/index/index",
+    "pages/playing/playing",
+     "pages/other/other"
+  
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "杏叶视频",
+    "navigationBarTextStyle":"black"
+  }
+}

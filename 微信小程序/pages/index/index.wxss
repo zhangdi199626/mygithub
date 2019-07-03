@@ -1,0 +1,195 @@
+/**index.wxss**/
+
+.header-fixed {
+  background-color: #fff;
+  position: fixed; /*固定定位*/
+  width: 100%;
+  top: 0rpx;
+  z-index: 100;  /*堆叠顺序*/
+}
+
+.header {
+  height: 60rpx;
+  background-color: #F8FBF9;
+  display: flex;
+  align-items: center;  /*垂直居中*/
+  width: 93%;
+  margin: 0  auto;
+  border-radius: 40rpx;
+  margin-bottom: 10rpx;
+}
+
+.header  image{
+  width: 32rpx;
+  height: 32rpx;
+  margin-left: 20rpx;
+}
+
+.header .right {
+  width: 42rpx;
+  height: 42rpx;
+}
+
+.header .search {
+  width: 80%;
+  height: 40rpx;
+  /* background-color: black;  */
+  display: block;
+  /* border: 1px  solid  #999;
+  background-color: red; */
+  margin-left: 10rpx; 
+  font-size: 15px; 
+
+}
+
+
+/* 点击搜索框后出现的界面************************************ */
+.click-sousuo {
+  width: 100%;
+  height: 400rpx;
+  /* background-color:yellow; */
+  margin-top: 80rpx;
+  overflow: hidden;
+}
+
+.click-sousuo  .top{
+  width: 93%;
+  height: 50rpx;
+  /* background-color: red; */
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30rpx;
+  font-size: 16px;
+}
+
+.click-sousuo  .bottom{
+  width: 93%;
+  height: 300rpx;
+  /* background-color:aquamarine; */
+  margin: 10rpx  auto;
+  font-size: 14px;
+}
+
+.click-sousuo  .bottom  text{
+  display: inline-block;
+  margin:10rpx;
+  padding: 10rpx  20rpx;
+  border-radius: 10rpx;
+  background-color: #f8faf8;
+}
+
+.isNone {
+  display: none;
+}
+
+/* 导航栏**************************************************** */
+.nav-box-fixed {
+  background-color: #fff;
+  width: 100%;
+  position: fixed;
+  top: 70rpx;
+  z-index: 100;
+}
+
+scroll-view  {
+  font-size: 16px;
+  width: 93%;
+  height: 55rpx;
+  /* background-color: blue;  */
+  margin: 0 auto;
+}
+
+scroll-view .nav-box {
+  display: flex;
+  justify-content: space-around;
+  width: 2450rpx;
+  height: 53rpx;
+  /* background-color: rgb(250, 7, 7); */
+  line-height: 50rpx;
+}
+
+.active {
+  color: #efc93a;
+  border-bottom: 2px  solid  #efc93a;
+}
+
+/* 轮播图**************************************************** */
+.lunbo-box {
+  width: 93%;
+  height: 210rpx;
+  /* background-color: gold; */
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 145rpx;
+
+}
+
+.lunbo-box swiper {
+  /* background-color: blue; */
+  height: 100%;
+}
+
+.slide-image{
+  width: 100%;
+  height: 100%;
+  border-radius: 15rpx;
+}
+
+/* ********************************************视频列表 */
+.videoList-box{
+  width: 93%;
+  /* height: 200rpx; */
+  /* background-color: aqua; */
+  margin: 27rpx auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.videoList-box .video-box {
+  width: 48%;
+  height: 280rpx;
+  /* background-color: firebrick; */
+  margin-bottom: 30rpx;
+  font-size: 13px;
+  overflow: hidden;
+}
+.videoList-box .video-box .picture {
+  widows: 100%;
+  height: 213rpx;
+  /* background-color: blue; */
+  position: relative;
+}
+.videoList-box .video-box .picture image {
+  width: 100%;
+  height: 100%;
+  border-radius: 10rpx;
+}
+.videoList-box .video-box .picture .playCount {
+  position: absolute;
+  bottom: 8rpx;
+  left: 50rpx;
+  color: white;
+  font-size: 12px;
+}
+.videoList-box .video-box .picture .playCount-p {
+  position: absolute;
+  bottom: 10rpx;
+  left: 10rpx;
+  width: 35rpx;
+  height: 30rpx;
+}
+
+.videoList-box .video-box .picture .commentCount {
+  position: absolute;
+  bottom: 8rpx;
+  left: 250rpx;
+  color: white;
+  font-size: 12px;
+}
+.videoList-box .video-box .picture .commentCount-p {
+  position: absolute;
+  bottom: 8rpx;
+  left: 210rpx;
+  width: 35rpx;
+  height: 30rpx;
+}

@@ -1,0 +1,22 @@
+/* pages/other/other.wxss */
+
+view{
+   font-size: 30px;
+   text-align: center;
+}
+
+.one {
+  margin-top: 200rpx;
+}
+
+.two {
+  font-size: 40px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.id {
+  color: red;
+  font-size: 40px;
+  font-weight: 600;
+}
